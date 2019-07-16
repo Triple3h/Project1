@@ -54,15 +54,15 @@ public class UserDao {
             while (rs.next()){
                 User user1 = new User();
 
-                user.setuId(rs.getInt("uid"));
-                user.setUsername(rs.getString("username"));
-                user.setSex(rs.getString("sex"));
-                user.setHobbys(rs.getString("hobbys"));
-                user.setPhone(rs.getString("phone"));
-                user.setEmail(rs.getString("email"));
-                user.setAddrs(rs.getString("addrs"));
-                user.setFlag(rs.getBoolean("flag"));
-                usersList.add(user);
+                user1.setuId(rs.getInt("uid"));
+                user1.setUsername(rs.getString("username"));
+                user1.setSex(rs.getString("sex"));
+                user1.setHobbys(rs.getString("hobbys"));
+                user1.setPhone(rs.getString("phone"));
+                user1.setEmail(rs.getString("email"));
+                user1.setAddrs(rs.getString("addrs"));
+                user1.setFlag(rs.getBoolean("flag"));
+                usersList.add(user1);
             }
         } catch (Exception e) {
             e.printStackTrace();

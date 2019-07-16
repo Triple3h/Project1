@@ -22,7 +22,7 @@ public class UserTest {
         user.setUsername("admin");
         user.setPassword("admin");
 //        int rows = uD.addUser(user);
-        List<User> list = uD.findUser(user);
+        List<User> list = uD.findUser(null);
         System.out.println(list);
     }
 }

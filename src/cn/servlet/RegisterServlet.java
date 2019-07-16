@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.List;
 
 public class RegisterServlet extends HttpServlet {
     @Override
@@ -31,6 +32,7 @@ public class RegisterServlet extends HttpServlet {
         String errMsg = "";
         int rows = 0;
         User user = new User();
+        UserDao UD = new UserDao();
         try {
             if(username == null || "".equals(username))
                 throw new Exception("用户名为空！");
@@ -40,7 +42,11 @@ public class RegisterServlet extends HttpServlet {
             if(!password1.equals(password2))
                 throw new Exception("两次密码不一致！");
 
-            UserDao UD = new UserDao();
+            List<User> list = UD.findUser(null);
+            for(User u:list){
+                if(username.equals(u.getUsername()))
+                    throw new Exception("用户名重复！");
+            }
 
             user.setUsername(username);
             user.setPassword(password1);
