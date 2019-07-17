@@ -49,11 +49,11 @@ public class User {
     public User() {
     }
 
-    public int getuId() {
+    public int getUid() {
         return uid;
     }
 
-    public void setuId(int id) {
+    public void setUid(int uid) {
         this.uid = uid;
     }
 

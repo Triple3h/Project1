@@ -16,6 +16,7 @@
     </script>
 </head>
 <body>
+<center>
     <table border="1">
         <caption>商品详细信息</caption>
         <thead>
@@ -61,5 +62,6 @@
             </tr>
         </tbody>
     </table>
+</center>
 </body>
 </html>

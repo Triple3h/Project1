@@ -24,7 +24,7 @@
         }
 
         function UserInfo() {
-
+            window.location.href = "loadUserDataServlet";
         }
 
         function onCheck(gid) {
@@ -33,6 +33,7 @@
     </script>
 </head>
 <body>
+<center>
     <table border="1">
         <caption>商品列表</caption>
         <thead>
@@ -64,5 +65,6 @@
             </th>
         </tr>
     </table>
+</center>
 </body>
 </html>

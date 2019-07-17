@@ -32,7 +32,7 @@
     <!-- 配置加载商品servlet -->
     <servlet>
         <servlet-name>goodsQueryServlet</servlet-name>
-        <servlet-class>cn.servlet.GoodsQueryServlet</servlet-class>
+        <servlet-class>cn.servlet.Goods.GoodsQueryServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>goodsQueryServlet</servlet-name>
@@ -42,7 +42,7 @@
     <!-- 配置删除商品servlet -->
     <servlet>
         <servlet-name>deleteGoodsServlet</servlet-name>
-        <servlet-class>cn.servlet.DeleteGoodsServlet</servlet-class>
+        <servlet-class>cn.servlet.Goods.DeleteGoodsServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>deleteGoodsServlet</servlet-name>
@@ -52,7 +52,7 @@
     <!-- 配置加载单个商品servlet -->
     <servlet>
         <servlet-name>loadGoodsDataServlet</servlet-name>
-        <servlet-class>cn.servlet.LoadGoodsDataServlet</servlet-class>
+        <servlet-class>cn.servlet.Goods.LoadGoodsDataServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>loadGoodsDataServlet</servlet-name>
@@ -72,7 +72,7 @@
     <!-- 配置登录servlet -->
     <servlet>
         <servlet-name>updateGoodsServlet</servlet-name>
-        <servlet-class>cn.servlet.UpdateGoodsServlet</servlet-class>
+        <servlet-class>cn.servlet.Goods.UpdateGoodsServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>updateGoodsServlet</servlet-name>
@@ -82,7 +82,7 @@
     <!-- 配置添加商品servlet -->
     <servlet>
         <servlet-name>addGoodsServlet</servlet-name>
-        <servlet-class>cn.servlet.AddGoodsServlet</servlet-class>
+        <servlet-class>cn.servlet.Goods.AddGoodsServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>addGoodsServlet</servlet-name>
@@ -97,5 +97,35 @@
     <servlet-mapping>
         <servlet-name>registerServlet</servlet-name>
         <url-pattern>/registerServlet</url-pattern>
+    </servlet-mapping>
+
+    <!-- 配置个人信息servlet -->
+    <servlet>
+        <servlet-name>loadUserDataServlet</servlet-name>
+        <servlet-class>cn.servlet.User.LoadUserDataServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>loadUserDataServlet</servlet-name>
+        <url-pattern>/loadUserDataServlet</url-pattern>
+    </servlet-mapping>
+
+    <!-- 配置更改个人信息servlet -->
+    <servlet>
+        <servlet-name>updateUserServlet</servlet-name>
+        <servlet-class>cn.servlet.User.UpdateUserServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>updateUserServlet</servlet-name>
+        <url-pattern>/updateUserServlet</url-pattern>
+    </servlet-mapping>
+
+    <!-- 配置修改密码servlet -->
+    <servlet>
+        <servlet-name>updatePwdServlet</servlet-name>
+        <servlet-class>cn.servlet.User.UpdatePwdServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>updatePwdServlet</servlet-name>
+        <url-pattern>/updatePwdServlet</url-pattern>
     </servlet-mapping>
 </web-app>

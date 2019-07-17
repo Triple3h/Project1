@@ -20,9 +20,10 @@ public class UserTest {
 //        User user = new User("admin1","123456","男","篮球","123456","wdw@qq.com","dwd",true);
         User user = new User();
         user.setUsername("admin");
-        user.setPassword("admin");
+        user.setPassword("123456");
 //        int rows = uD.addUser(user);
-        List<User> list = uD.findUser(null);
+        List<User> list = uD.findUser(user);
+//        int rows = uD.updateUser(user);
         System.out.println(list);
     }
 }

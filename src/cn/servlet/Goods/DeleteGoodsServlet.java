@@ -1,4 +1,4 @@
-package cn.servlet;
+package cn.servlet.Goods;
 
 import cn.dao.GoodsDao;
 import cn.entity.Goods;

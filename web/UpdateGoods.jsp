@@ -11,6 +11,7 @@
     <title>修改商品页面</title>
 </head>
 <body>
+<center>
     <form action="updateGoodsServlet" method="post">
         <table border="1">
             <caption>商品详情</caption>
@@ -63,5 +64,6 @@
             </tr>
         </table>
     </form>
+</center>
 </body>
 </html>

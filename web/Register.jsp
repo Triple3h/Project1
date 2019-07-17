@@ -11,22 +11,23 @@
     <title>注册界面</title>
 </head>
 <body>
+<center>
     <form action="registerServlet" method="post">
         <table border="1">
             <tr>
-                <th>用户名</th>
+                <th>用户名*</th>
                 <td>
                     <input type="text" name="username" />
                 </td>
             </tr>
             <tr>
-                <th>密码</th>
+                <th>密码*</th>
                 <td>
                     <input type="password" name="password1" />
                 </td>
             </tr>
             <tr>
-                <th>确认密码</th>
+                <th>确认密码*</th>
                 <td>
                     <input type="password" name="password2" />
                 </td>
@@ -56,18 +57,19 @@
                 </td>
             </tr>
             <tr>
-                <th>性别</th>
-                <td>
+                <th>性别*</th>
+                <td class="radio1">
                     <input type="radio" name="sex" value="男"/>男
                     <input type="radio" name="sex" value="女"/>女
                 </td>
             </tr>
             <tr>
-                <th>
+                <th colspan="2">
                     <input type="submit" value="确认注册" />
                 </th>
             </tr>
         </table>
     </form>
+</center>
 </body>
 </html>

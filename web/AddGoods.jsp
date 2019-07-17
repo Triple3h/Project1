@@ -11,6 +11,7 @@
     <title>增加商品</title>
 </head>
 <body>
+<center>
 <form action="addGoodsServlet" method="post">
     <table border="1">
         <caption>添加一个新的商品</caption>
@@ -58,5 +59,6 @@
 
     </table>
 </form>
+</center>
 </body>
 </html>

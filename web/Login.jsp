@@ -28,6 +28,7 @@
     </script>
 </head>
 <body>
+<center>
     <form action="loginServlet" method="post" onsubmit="return onCheck()">
         <table border="1">
             <caption>用户登录</caption>
@@ -44,12 +45,13 @@
                 </td>
             </tr>
             <tr>
-                <td>
+                <td colspan="2" align="center">
                     <input type="submit" value="登录"/>
                     <input type="button" value="注册" onclick="onRegister()"/>
                 </td>
             </tr>
         </table>
     </form>
+</center>
 </body>
 </html>
