@@ -2,6 +2,7 @@ package cn.servlet.Goods;
 
 import cn.dao.GoodsDao;
 import cn.entity.Goods;
+import cn.utils.Goodsutils;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -25,24 +26,18 @@ public class LoadGoodsDataServlet extends HttpServlet {
         String operate = req.getParameter("operate");
 
         GoodsDao goodsDao = new GoodsDao();
-        Goods goods = new Goods();
         List<Goods> list = new ArrayList<>();
 
         String errMsg = "";
         try {
-            if(gid <= 0 )
-                throw new Exception("商品编号有误！");
-
+            Goods goods = new Goods();
             goods.setGid(gid);
             list = goodsDao.findGoods(goods);
 
             if(list == null || list.size()<1){
                 throw new Exception("未找到商品！");
             }
-//            else {
-//                req.setAttribute("list",list);
-//                req.getRequestDispatcher("UpdateGoods.jsp").forward(req,resp);
-//            }
+
         } catch (Exception e) {
             e.printStackTrace();
             errMsg = e.getMessage();

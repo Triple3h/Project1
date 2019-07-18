@@ -6,6 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
     <title>查看详情</title>
@@ -21,38 +22,47 @@
         <caption>商品详细信息</caption>
         <thead>
             <tr>
-                <td></td> <!-- 插入图片 -->
+                <td colspan="2">
+                    <c:choose>
+                        <c:when test="${good.goodsInfoPic!=null}">
+                            <img src="upload/${good.goodsInfoPic}" width="500px" height="500px">
+                        </c:when>
+                        <c:otherwise>
+                            尚未上传图片！
+                        </c:otherwise>
+                    </c:choose>
+                </td>
             </tr>
         </thead>
         <tbody>
             <tr>
                 <th>商品编号</th>
                 <th>
-                    <input type="text" value="${good.gid}" readonly="readonly" />
+                    ${good.gid}
                 </th>
             </tr>
             <tr>
                 <th>商品名字</th>
                 <th>
-                    <input type="text" value="${good.goodsInfoName}" readonly="readonly" />
+                    ${good.goodsInfoName}
                 </th>
             </tr>
             <tr>
                 <th>商品价格</th>
                 <th>
-                    <input type="text" value="${good.goodsInfoPrice}" readonly="readonly" />
+                    ${good.goodsInfoPrice}
                 </th>
             </tr>
             <tr>
                 <th>商品简介</th>
                 <th>
-                    <input type="text" value="${good.goodsInfoDescription}" readonly="readonly" />
+                    ${good.goodsInfoDescription}
                 </th>
             </tr>
             <tr>
                 <th>商品库存</th>
                 <th>
-                    <input type="text" value="${good.goodsInfoStock}" readonly="readonly" />
+                    ${good.goodsInfoStock}
                 </th>
             </tr>
             <tr>

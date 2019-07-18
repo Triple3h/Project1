@@ -6,6 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
     <title>更改个人信息</title>
@@ -30,8 +31,16 @@
             <tr>
                 <th>性别</th>
                 <td>
-                    <input type="radio" name="sex" value="男" />男
-                    <input type="radio" name="sex" value="女" />女
+                    <c:choose>
+                        <c:when test="${'男'.equals(user.sex)}">
+                            <input type="radio" name="sex" value="男" checked="checked"/>男
+                            <input type="radio" name="sex" value="女" />女
+                        </c:when>
+                        <c:otherwise>
+                            <input type="radio" name="sex" value="男" />男
+                            <input type="radio" name="sex" value="女" checked="checked"/>女
+                        </c:otherwise>
+                    </c:choose>
                 </td>
             </tr>
             <tr>

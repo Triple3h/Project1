@@ -2,6 +2,7 @@ package cn.servlet.Goods;
 
 import cn.dao.GoodsDao;
 import cn.entity.Goods;
+import cn.utils.Goodsutils;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -18,53 +19,12 @@ public class AddGoodsServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        String goodsInfoName = req.getParameter("goodsInfoName");
-        double goodsInfoPrice;
-        String goodsInfoDescription = req.getParameter("goodsInfoDescription");
-        int goodsInfoStock;
-//        String goodsInfoPic = req.getParameter("goodsInfoPic");
-        int flag = Integer.parseInt(req.getParameter("flag"));
-        //缺少图片
-
         String errMsg = "";
         int rows = 0;
         try {
-
-            //包装类空串排除
-            String price = req.getParameter("goodsInfoPrice");
-            if(price == null || "".equals(price)) {
-                throw new Exception("价格不能为空！");
-            }else {
-                goodsInfoPrice = Double.parseDouble(price);
-            }
-
-            String stock = req.getParameter("goodsInfoStock");
-            if(stock == null || "".equals(stock)) {
-                throw new Exception("库存不能为空！");
-            }else {
-                goodsInfoStock = Integer.parseInt(stock);
-            }
-
-            if(goodsInfoName == null || "".equals(goodsInfoName)
-                || goodsInfoPrice <= 0 || goodsInfoDescription == null || "".equals(goodsInfoDescription)
-                || goodsInfoStock <= 0 )
-                throw new Exception("输入信息有误！");
-            //少图片判断
+            Goods goods = Goodsutils.uploadGoodsFile(req,resp);
 
             GoodsDao goodsDao = new GoodsDao();
-            Goods goods = new Goods();
-
-            goods.setGoodsInfoName(goodsInfoName);
-            goods.setGoodsInfoPrice(goodsInfoPrice);
-            goods.setGoodsInfoDescription(goodsInfoDescription);
-            goods.setGoodsInfoStock(goodsInfoStock);
-
-            if(flag==1){
-                goods.setFlag(true);
-            }else {
-                goods.setFlag(false);
-            }
-
             rows = goodsDao.addGoods(goods);
 
             if(rows <= 0)

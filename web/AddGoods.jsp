@@ -12,7 +12,7 @@
 </head>
 <body>
 <center>
-<form action="addGoodsServlet" method="post">
+<form action="addGoodsServlet" method="post" enctype="multipart/form-data">
     <table border="1">
         <caption>添加一个新的商品</caption>
         <tbody>
@@ -38,6 +38,12 @@
             <th>商品库存</th>
             <th>
                 <input type="text" name="goodsInfoStock" />
+            </th>
+        </tr>
+        <tr>
+            <th>商品图片</th>
+            <th>
+                <input type="file" name="goodsInfoPic" />
             </th>
         </tr>
         <tr>

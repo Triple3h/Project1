@@ -54,7 +54,7 @@ public class GoodsDao {
 
                 goods.setGid(rs.getInt("gid"));
                 goods.setGoodsInfoName(rs.getString("goodsInfo_name"));
-//                goods.setGoodsInfoPic(rs.getString("setGoodsInfo_pic"));
+                goods.setGoodsInfoPic(rs.getString("goodsInfo_pic"));
                 goods.setGoodsInfoPrice(rs.getDouble("goodsInfo_price"));
                 goods.setGoodsInfoDescription(rs.getString("goodsInfo_description"));
                 goods.setGoodsInfoStock(rs.getInt("goods_stock"));
@@ -101,12 +101,13 @@ public class GoodsDao {
         //`goodsInfo_name``goodsInfo_pic``goodsInfo_price`
         // `goodsInfo_description``goods_stock``flag`
         String sql = "insert into goodsinfo (goodsInfo_name,goodsInfo_price," +
-                "goodsInfo_description,goods_stock,flag) values(?,?,?,?,?)";
+                "goodsInfo_description,goodsInfo_pic,goods_stock,flag) values(?,?,?,?,?,?)";
         List<Object> list = new ArrayList<>();
         if(goods!=null){
             list.add(goods.getGoodsInfoName());
             list.add(goods.getGoodsInfoPrice());
             list.add(goods.getGoodsInfoDescription());
+            list.add(goods.getGoodsInfoPic());
             list.add(goods.getGoodsInfoStock());
             list.add(goods.isFlag());
         }
@@ -130,12 +131,13 @@ public class GoodsDao {
         //`goodsInfo_name``goodsInfo_pic``goodsInfo_price`
         // `goodsInfo_description``goods_stock``flag`
         String sql = "update goodsinfo set goodsInfo_name =?,goodsInfo_price =?," +
-                "goodsInfo_description =?,goods_stock =?,flag =? where gid = ?";
+                "goodsInfo_description =?,goodsInfo_pic =?,goods_stock =?,flag =? where gid = ?";
         List<Object> list = new ArrayList<>();
         if (goods != null) {
             list.add(goods.getGoodsInfoName());
             list.add(goods.getGoodsInfoPrice());
             list.add(goods.getGoodsInfoDescription());
+            list.add(goods.getGoodsInfoPic());
             list.add(goods.getGoodsInfoStock());
             list.add(goods.isFlag());
             list.add(goods.getGid());
