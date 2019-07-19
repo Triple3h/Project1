@@ -128,4 +128,14 @@
         <servlet-name>updatePwdServlet</servlet-name>
         <url-pattern>/updatePwdServlet</url-pattern>
     </servlet-mapping>
+
+    <!-- 配置修改密码servlet -->
+    <servlet>
+        <servlet-name>quitUserServlet</servlet-name>
+        <servlet-class>cn.servlet.User.QuitUserServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>quitUserServlet</servlet-name>
+        <url-pattern>/quitUserServlet</url-pattern>
+    </servlet-mapping>
 </web-app>

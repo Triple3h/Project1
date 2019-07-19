@@ -15,10 +15,46 @@
             window.location.href = "goodsQueryServlet";
         }
     </script>
+    <style type="text/css">
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+        div{
+            height: 750px;
+            background: url("images/2.jpg") no-repeat;
+            background-size: auto;
+            padding-top: 200px;
+        }
+        th{
+            font-size: 21px;
+        }
+        input[type="button"] {
+            width: 110px;
+            height: 45px;
+            line-height: 28px;
+            text-align: center;
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+            margin: 0 0 0;
+            background: #F8AF14;
+            border-radius: 2px;
+            text-decoration: none;
+            border: 1px solid white;
+            margin-right: 15px;
+            margin-left: 5px;
+        }
+        input[type="button"]:hover{
+            background:orangered ;
+            color: white;
+        }
+    </style>
 </head>
 <body>
 <center>
-    <table border="1">
+    <div>
+        <table border="1">
         <caption>商品详细信息</caption>
         <thead>
             <tr>
@@ -72,6 +108,7 @@
             </tr>
         </tbody>
     </table>
+    </div>
 </center>
 </body>
 </html>

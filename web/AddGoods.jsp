@@ -9,10 +9,26 @@
 <html>
 <head>
     <title>增加商品</title>
+    <style type="text/css">
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+        div{
+            height: 750px;
+            background: url("images/2.jpg") no-repeat;
+            background-size: auto;
+            padding-top: 200px;
+        }
+        td{
+            font-size: 21px;
+        }
+    </style>
 </head>
 <body>
 <center>
-<form action="addGoodsServlet" method="post" enctype="multipart/form-data">
+    <div>
+        <form action="addGoodsServlet" method="post" enctype="multipart/form-data">
     <table border="1">
         <caption>添加一个新的商品</caption>
         <tbody>
@@ -65,6 +81,7 @@
 
     </table>
 </form>
+    </div>
 </center>
 </body>
 </html>

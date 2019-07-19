@@ -42,12 +42,103 @@
             background-size: auto;
             padding-top: 200px;
         }
+        #top{
+            position: absolute;
+            top: 10%;
+            right: 10%;
+        }
+
+        table{
+            background: white;
+
+        }
         td{
-            font-size: 21px;
+            background: white;
+        }
+        th{
+            background: white;
+            width: 100px;
+            height: 50px;
+            font-size: 23px;
+        }
+        input[type="text"] {
+            width: 300px;
+            height: 45px;
+            font-size: 22px;
+            line-height: 35px;
+            border-radius: 3px;
+            border: 1px solid #000;
+            text-indent: 10px;
+            background: white;
+        }
+
+        input[type="password"] {
+            width: 300px;
+            height: 45px;
+            font-size: 22px;
+            line-height: 35px;
+            border-radius: 3px;
+            border: 1px solid #000;
+            text-indent: 10px;
+            background: white;
+        }
+        input[type="submit"] {
+            width: 110px;
+            height: 45px;
+            line-height: 28px;
+            text-align: center;
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+            margin: 0 0 0;
+            background: #F8AF14;
+            border-radius: 2px;
+            text-decoration: none;
+            border: 1px solid white;
+            margin-right: 15px;
+            margin-left: 5px;
+        }
+        input[type="button"] {
+            width: 110px;
+            height: 45px;
+            line-height: 28px;
+            text-align: center;
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+            margin: 0 0 0;
+            background: #F8AF14;
+            border-radius: 2px;
+            text-decoration: none;
+            border: 1px solid white;
+            margin-right: 15px;
+            margin-left: 5px;
+        }
+        input[type="submit"]:hover{
+            background:orangered ;
+            color: white;
+        }
+        input[type="button"]:hover{
+            background:orangered ;
+            color: white;
+        }
+        caption{
+            font-size: 30px;
+            font-variant: small-caps;
         }
     </style>
 </head>
 <body>
+    <span id="top" >
+        <tr>
+            <td>
+                欢迎${userInfo.username}登录&nbsp;&nbsp;&nbsp;
+            </td>
+            <td>
+                <a href="quitUserServlet">退出登录</a>
+            </td>
+        </tr>
+    </span >
 <center>
     <div>
         <table border="1">
