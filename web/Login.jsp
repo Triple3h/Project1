@@ -18,7 +18,7 @@
                 return true;
             }else {
                 alert("登录失败！");
-                return false;
+                return false; vbv
             }
         }
 
@@ -44,6 +44,7 @@
         td{
             background: white;
             font-size: 23px;
+            background: transparent;
         }
         th{
             background: white;

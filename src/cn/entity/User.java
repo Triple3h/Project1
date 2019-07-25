@@ -12,7 +12,7 @@ public class User {
     private String email;
     private String addrs;
     private boolean flag;
-    private Date LoginTime;
+    private String logintime;
 
     public User(String username, String password, String sex, String hobbys, String phone, String email, String addrs, boolean flag) {
         this.username = username;
@@ -25,7 +25,7 @@ public class User {
         this.flag = flag;
     }
 
-    public User(int uid, String username, String password, String sex, String hobbys, String phone, String email, String addrs, boolean flag, Date loginTime) {
+    public User(int uid, String username, String password, String sex, String hobbys, String phone, String email, String addrs, boolean flag, String logintime) {
         this.uid = uid;
         this.username = username;
         this.password = password;
@@ -35,7 +35,7 @@ public class User {
         this.email = email;
         this.addrs = addrs;
         this.flag = flag;
-        LoginTime = loginTime;
+        this.logintime = logintime;
     }
 
     public User(int uid, String username, String password, String sex, boolean flag) {
@@ -121,12 +121,12 @@ public class User {
         this.flag = flag;
     }
 
-    public Date getLoginTime() {
-        return LoginTime;
+    public String getLogintime() {
+        return logintime;
     }
 
-    public void setLoginTime(Date loginTime) {
-        LoginTime = loginTime;
+    public void setLogintime(String logintime) {
+        this.logintime = logintime;
     }
 
     @Override
@@ -134,13 +134,14 @@ public class User {
         return "User{" +
                 "uid=" + uid +
                 ", username='" + username + '\'' +
+                ", password='" + password + '\'' +
                 ", sex='" + sex + '\'' +
                 ", hobbys='" + hobbys + '\'' +
                 ", phone='" + phone + '\'' +
                 ", email='" + email + '\'' +
                 ", addrs='" + addrs + '\'' +
                 ", flag=" + flag +
-                ", LoginTime=" + LoginTime +
+                ", logintime='" + logintime + '\'' +
                 '}';
     }
 }

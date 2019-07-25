@@ -155,6 +155,12 @@
                     </td>
                 </tr>
                 <tr>
+                    <th>最后登录时间</th>
+                    <td>
+                        <input type="text" name="logintime" value="${user.logintime}" readonly="readonly"/>
+                    </td>
+                </tr>
+                <tr>
                     <th colspan="2">
                         <input type="button" value="返回" onclick="onBack()"/>
                         <input type="button" value="修改个人信息" onclick="onUpdate()"/>

@@ -138,4 +138,14 @@
         <servlet-name>quitUserServlet</servlet-name>
         <url-pattern>/quitUserServlet</url-pattern>
     </servlet-mapping>
+
+    <!-- 配置修改图片servlet -->
+    <servlet>
+        <servlet-name>updateGoodsImgServlet</servlet-name>
+        <servlet-class>cn.servlet.Goods.UpdateGoodsImgServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>updateGoodsImgServlet</servlet-name>
+        <url-pattern>/updateGoodsImgServlet</url-pattern>
+    </servlet-mapping>
 </web-app>

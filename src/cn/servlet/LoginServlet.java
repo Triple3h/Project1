@@ -10,7 +10,9 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 public class LoginServlet extends HttpServlet {
@@ -40,6 +42,12 @@ public class LoginServlet extends HttpServlet {
                 throw new Exception("用户名或密码错误！");
             }
 
+            //最后登录时间
+            Date date = new Date();
+            SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+            String dateStr = sdf.format(date);
+            list.get(0).setLogintime(dateStr);
+            UD.updateUser(list.get(0));
             HttpSession session = req.getSession();
             session.setAttribute("userInfo",list.get(0));
 

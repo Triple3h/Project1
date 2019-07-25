@@ -116,36 +116,38 @@
     </style>
 </head>
 <body>
-    </div>
-        <form action="updatePwdServlet" method="post" onsubmit="return onCheck()">
-            <table border="1">
-                <input type="hidden" name="username" value="${user.username}" readonly="readonly"/>
-                <tr>
-                    <td>输入旧密码</td>
-                    <td>
-                        <input type="password" name="oldPassword" id="oldPassword" />
-                    </td>
-                </tr>
-                <tr>
-                    <td>输入新密码</td>
-                    <td>
-                        <input type="password" name="newPassword1" id="newPassword1" />
-                    </td>
-                </tr>
-                <tr>
-                    <td>确认密码</td>
-                    <td>
-                        <input type="password" name="newPassword2" id="newPassword2" />
-                    </td>
-                </tr>
-                <tr>
-                    <td colspan="2">
-                        <input type="submit" value="提交" />
-                        <input type="button" value="返回" onclick="onBack()" />
-                    </td>
-                </tr>
-            </table>
-        </form>
-    </div>
+    <center>
+        <div>
+            <form action="updatePwdServlet" method="post" onsubmit="return onCheck()">
+                <table border="1">
+                    <input type="hidden" name="username" value="${user.username}" readonly="readonly"/>
+                    <tr>
+                        <td>输入旧密码</td>
+                        <td>
+                            <input type="password" name="oldPassword" id="oldPassword" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>输入新密码</td>
+                        <td>
+                            <input type="password" name="newPassword1" id="newPassword1" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>确认密码</td>
+                        <td>
+                            <input type="password" name="newPassword2" id="newPassword2" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <input type="submit" value="提交" />
+                            <input type="button" value="返回" onclick="onBack()" />
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </center>
 </body>
 </html>

@@ -10,7 +10,7 @@
 <html>
 <head>
     <title>修改商品页面</title>
-    <script type="text/javascript">
+    <script type="text/javascript" src="js/upload.js" rel="stylesheet">
         function onResetImg(obj) {
             var td= obj.parentElement;
             var content='<input type="file" name="goodsInfoPic" />';
@@ -28,9 +28,7 @@
             td.innerHTML = content;
         }
 
-        function onBack() {
-            history.back();
-        }
+
     </script>
     <style type="text/css">
         *{
@@ -95,24 +93,16 @@
 <body>
 <center>
     <div>
-        <form action="updateGoodsServlet" method="post" enctype="multipart/form-data">
+        <form action="updateGoodsServlet" method="post" >
             <table border="1">
                 <caption>商品详情</caption>
                     <input type="hidden" name="gid" value="${good.gid}">
                     <thead>
                         <tr>
                             <td colspan="2">
-                                <c:choose>
-                                    <c:when test="${good.goodsInfoPic!=null}">
-                                        <img src="upload/${good.goodsInfoPic}" width="500px" height="500px">
-                                        <input type="button" value="重新上传" onclick="onResetImg(this)">
-                                        <input type="hidden" name="goodsInfoPic" value="${good.goodsInfoPic}"/>
-                                    </c:when>
-                                    <c:otherwise>
-                                        没有上传图片！<br/>
-                                        <input type="file" name="goodsInfoPic" />
-                                    </c:otherwise>
-                                </c:choose>
+                                <img id="goodsPic" src="upload/${good.goodsInfoPic}" style="display: ${good.goodsInfoPic!=null?'block':'none'}" width="300px" height="200px" />
+                                <input type="hidden" name="goodsInfoPic" id="goodsInfoPic" value="${good.goodsInfoPic}" />
+                                <input type="button" value="上传" onclick="onUploadImg()">
                             </td>
                         </tr>
                     </thead>

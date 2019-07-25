@@ -4,6 +4,7 @@ package cn.utils;
 import cn.entity.User;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.ArrayList;
 
 public class Userutils {
 
@@ -21,5 +22,6 @@ public class Userutils {
         user.setSex(req.getParameter("sex"));
 
         return user;
+
     }
 }

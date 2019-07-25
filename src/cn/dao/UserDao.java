@@ -152,10 +152,15 @@ public class UserDao {
                 sf.append(",sex = ? ");
                 list.add(user.getSex());
             }
+            if(user.getLogintime()!=null){
+                sf.append(",logintime = ? ");
+                list.add(user.getLogintime());
+            }
             if(user.getUsername()!=null){
                 sf.append("where username = ?");
                 list.add(user.getUsername());
             }
+
 
             System.out.println(sf.toString());
             sta = conn.prepareStatement(sf.toString());
